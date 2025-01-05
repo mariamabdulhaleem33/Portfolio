@@ -417,6 +417,11 @@
         font-size: 15px;
         font-weight: 300;
         height:20%;
+        overflow-y:scroll;
+    }
+       
+    .projects::-webkit-scrollbar {
+        display: none;
     }
     
     .progressbar-container { 
