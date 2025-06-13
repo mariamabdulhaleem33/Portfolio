@@ -1,0 +1,1011 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Londrina+Solid:wght@100;300;400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@keyframes slideRight {
+    from{
+            translate: -100px;
+            /* opacity: 0; */
+        }
+        to{
+            translate:0;
+            /* opacity: 1; */
+        }
+    }
+
+    @keyframes fade {
+        from{
+            opacity: 0.3;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideLeft {
+        from{
+            translate: 100px;
+            /* opacity: 0; */
+        }
+        to{
+            translate:0;
+            /* opacity: 1; */
+        }
+    }
+
+    @keyframes scaleTabs {
+        0%{
+            scale:0;
+            opacity:0;
+        }
+        50%{
+            scale:1.1;
+            opacity:0.5;
+        }
+        100%{
+            scale:1;
+            opacity:1;
+        }
+    }
+
+    @keyframes colorDir {
+        0%{
+            background-image: linear-gradient(to top right, #b209c2, #34067e);
+        }
+        100%{
+            background-image: linear-gradient(to  bottom left, #b209c2, #34067e);
+        }
+    }
+
+    @keyframes progresshtml {
+        0%{
+            width:0;
+        }
+        100%{
+            width: 95%;
+        }
+    }
+
+    @keyframes progresscss {
+        0%{
+            width:0;
+        }
+        100%{
+            width: 90%;
+        }
+    }
+
+    @keyframes progressjs {
+        0%{
+            width:0;
+        }
+        100%{
+            width: 80%;
+        }
+    }
+
+    @keyframes progressreact {
+        0%{
+            width:0;
+        }
+        100%{
+            width: 75%;
+        }
+    }
+    
+    
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    
+    body{
+        font-family: "Poppins", sans-serif;
+        background-color: #000000;
+    }
+    
+    @media only screen and (min-width: 992px){
+
+    .container{
+        display:flex;
+        height:100vh;
+        justify-content: space-between;
+    }
+
+    .nav{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:10%;
+        background-image: linear-gradient(to bottom, #b209c2, #34067e);
+    }
+    
+    .main{
+        animation-name: slideRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .content{
+        width:90%;
+    }
+    
+    .nav ul{
+        height:90%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .nav > ul > a{
+        height: 18%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+        color:#f9ecf9;
+        font-size:1em;
+        text-align:center;
+        font-weight: 600;
+        transition: all 500ms ease-in-out;
+    }
+    
+    .main > ul > a{
+        animation-name: scaleTabs;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .nav> ul > a> li{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .nav> ul > a> li>i{
+        scale:2;
+    }
+    
+    
+    .nav > ul  li:hover{
+        color:#fd93cd;
+        transition: all 1s ease-in-out;
+        scale:1.1;
+    }
+    
+    li.active{
+        color:#fd93cd;
+        scale:1.1;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    
+    .content-welcome{
+        width:92%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        animation-name:slideLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        position: relative;
+    }
+    
+    .content-welcome img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    
+    .welcome-text{
+        height:100%;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        align-items:center;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+    }
+    
+    .welcome-text> h3{
+        height: fit-content;
+        color:#ca0edb;
+        font-size:4em;
+        letter-spacing: 5px;
+        animation-name:fade;
+        animation-duration: 1s;
+        animation-direction:alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .welcome-text> p{
+        width:70%;
+        height: fit-content;
+        color:#ef4dfd;
+        font-size:2.25em;
+        font-weight:500;
+        animation-name:fade;
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .welcome-text> p::first-line{
+        color:#ffffff;
+    }
+    
+    .callToAction{
+        width: 60%;
+        display:flex;
+        justify-content:space-evenly;
+    }
+    
+    .callToAction button{
+        height:100%;
+        width:100%;
+        padding:5px;
+        border:none;
+        border-radius:10px;
+        font-size:1.25em;
+        font-weight:600;
+        cursor:pointer;
+    }
+    
+    .callToAction a, .submit{
+        width:40%;
+        height:60px;
+    }
+    
+    .browse-projects,.submit{
+        background-image: linear-gradient(to top right, #b209c2, #48067e);
+        color:#ffffff;
+    }
+    
+    .submit{
+        border:none;
+        border-radius: 10px;
+        font-size: 18px;
+        height:40px;
+    }
+    
+    .browse-projects:hover, .submit:hover{
+        animation: colorDir 1s ease-in-out  both;
+    }
+    
+    .contact-button{
+        color: #ffffff;
+        background-color:#2b2626;
+    }
+    
+    .contact-button:hover{
+        background-color:#1f1b1b;
+    }
+    
+    /* skills style*/
+    
+    .skills-content, .projects-content, .contact-content{
+        width:92%;
+        height:100vh;
+        background-image: url(./big-data-technology-cyberspace-motherboard-microchip-circuit-board-computer-processor-neon-light.jpg);
+        background-size: cover;
+        background-position: center ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    
+    .wrapper{
+        background-color: rgba(0, 0, 0, 80%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height:100%;
+        width:100%;
+    }
+    
+    .wrapper h2{
+        color: #ca0edb;
+        text-align: center;
+        font-size: 32px;
+        animation-name:fade;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .skills, .projects{
+        width:80%;
+        height:90%;
+        display:flex;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        flex-wrap:wrap;
+    }
+    
+    .projects{
+        padding: 0 15px;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 5%;
+    }
+    
+    .skill-content, .project-content{
+        width:26%;
+        height:35%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        align-items:center;
+        box-shadow: 2px 2px 5px #ca0edb;
+        cursor: pointer;
+        border-radius: 5%;
+    }
+    
+    .project-content{
+        height:80%;
+        flex-shrink: 0;
+        align-self: center;
+        justify-content: space-between;
+        overflow:hidden;
+        box-shadow: 2px 0px 5px #ca0edb;
+        animation-name: slideLeft;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2s;
+    }
+    
+    .alfajr{
+        animation-delay: 1;
+    
+    }
+    
+    .bookstore{
+        animation-delay: 2;
+    }
+    
+    .portfolio{
+        animation-delay: 3;
+    }
+    
+    .hapi{
+        animation-delay: 4;
+    }
+    
+    .project-content:hover{
+        scale:1.1;
+        transition: 2s;
+    }
+    
+    .skill-content>i{
+        animation: fade 800ms ease-in-out 5 alternate ;
+        scale:3;
+    }
+    
+    .project-img{
+        border-radius: 5%;
+        width:100%;
+        height:45%; 
+    }
+    
+    .skill-content>p{
+        color: #ffffff;
+        font-size: 20px;
+    }
+    
+    .project-content>p{
+        color:#ca0edb;
+        font-size: 20px;
+        align-self: start;
+        font-weight: 500;
+        width:90%;
+        margin: auto;
+        height:5%;
+    }
+    
+    p.describtion{
+        color:white;
+        font-size: 15px;
+        font-weight: 300;
+        height: 20%;
+        overflow: auto;
+        scrollbar-width: none;    
+        -ms-overflow-style: none; 
+    }
+
+    p.describtion::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .progressbar-container { 
+        background-color: rgb(192, 192, 192); 
+        width: 80%; 
+        height:5%;
+        border-radius: 15px; 
+    } 
+    
+    .skill { 
+        background-color: #ca0edb; 
+        color: white; 
+        text-align: right; 
+        border-radius: 15px; 
+        height:100%;
+    } 
+    
+    .html { 
+        width: 95%; 
+        animation: progresshtml 2s ease-in-out;
+    }
+    
+    .css{
+        animation: progresscss 2s ease-in-out;
+        width:90%;
+    }
+    
+    .js{
+        width:80%;
+        animation: progressjs 2s ease-in-out;
+    }
+    
+    .bs{
+        width:80%;
+        animation: progressjs 2s ease-in-out;
+    }
+    
+    .react{
+        width:75%;
+        animation: progressreact 2s ease-in-out;
+    }
+    
+    .html-skill{
+        animation: slideRight 1s ease-in-out;
+    }
+    
+    .css-skill{
+        animation: slideLeft 1s ease-in-out;
+    }
+    
+    .js-skill{
+        animation: slideLeft 1s ease-in-out;
+    }
+    
+    .bs-skill{
+        animation: slideRight 1s ease-in-out;
+    }
+    
+    .react-skill{
+        animation: slideLeft 1s ease-in-out;
+    }
+    
+    .project-skills{
+        height:20%;
+        display:flex;
+        justify-content: flex-start;
+        align-content: space-evenly;
+        width:92%;
+        flex-wrap: wrap;
+        gap:2%;
+    }
+    
+    .project-skill{
+        width:30%;
+        padding:2px;
+        color: #ef4dfd;
+        background-color: #1f1b1b;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .projects::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .contact-content>.wrapper{
+        justify-content: space-evenly;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 2px 0px 5px #ca0edb;
+        border-radius: 10px;
+        width:30%;
+        height:75%;
+        animation: slideLeft 2s ease-in-out;
+    }
+    
+    input, textarea{
+        width:80%;
+        height:5%;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #000000;
+        color:#b8b3b3;
+        font-size: 18px;
+        border: none;
+        box-shadow: 2px 0px 5px #ca0edb;
+    }
+    
+    .message{
+        height:20%;
+    }
+    
+    input:focus, textarea:focus{
+        outline:none;
+        border:none;
+        box-shadow: 2px 0px 5px #f156ff;
+    }
+    
+    .ico{
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width:10%;
+        animation: slideRight 2s ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    body{
+        background-image: url(./back.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+    }
+    .container{
+        display:flex;
+        flex-direction:column;
+        height:100vh;
+        justify-content: space-between;
+    }
+
+    .nav{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:11%;
+        background-image: linear-gradient(to bottom, #b209c2, #34067e);
+    }
+    
+    .main{
+        animation-name: slideRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .content{
+        width:100%;
+    }
+
+    .nav ul{
+        height:100%;
+        width:90%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    
+    .nav > ul > a{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+        color:#f9ecf9;
+        font-size:0.9em;
+        text-align:center;
+        font-weight: 500;
+        transition: all 500ms ease-in-out;
+    }
+    
+    .main > ul > a{
+        animation-name: scaleTabs;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .nav> ul > a> li{
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    
+    .nav> ul > a> li>i{
+        scale:1.4;
+    }
+    
+    .nav > ul  li:hover{
+        color:#fd93cd;
+        transition: all 1s ease-in-out;
+    }
+    
+    li.active{
+        color:#fd93cd;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    
+    .content-welcome{
+        height: 89%;
+        width:100%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        animation-name:slideLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        position: relative;
+    }
+    
+    .content-welcome img {
+        display:none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    
+    .welcome-text{
+        height:100%;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        align-items:center;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+    }
+    
+    .welcome-text> h3{
+        height: fit-content;
+        color:#ca0edb;
+        font-size:3.25em;
+        letter-spacing: 5px;
+        animation-name:fade;
+        animation-duration: 1s;
+        animation-direction:alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .welcome-text> p{
+        width:90%;
+        height: fit-content;
+        color:#ef4dfd;
+        font-size:1.5em;
+        font-weight:500;
+        animation-name:fade;
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .welcome-text> p::first-line{
+        color:#ffffff;
+    }
+    
+    .callToAction{
+        width: 80%;
+        display:flex;
+        justify-content:space-evenly;
+    }
+    
+    .callToAction button{
+        height:100%;
+        width:100%;
+        padding:5px;
+        border:none;
+        border-radius:10px;
+        font-size:1em;
+        font-weight:600;
+        cursor:pointer;
+    }
+    
+    .callToAction a, .submit{
+        width:40%;
+        height:50px;
+    }
+    
+    .browse-projects,.submit{
+        background-image: linear-gradient(to top right, #b209c2, #48067e);
+        color:#ffffff;
+    }
+    
+    .submit{
+        border:none;
+        border-radius: 10px;
+        font-size: 18px;
+        height:40px;
+    }
+    
+    .browse-projects:hover, .submit:hover{
+        animation: colorDir 1s ease-in-out  both;
+    }
+    
+    .contact-button{
+        color: #ffffff;
+        background-color:#2b2626;
+    }
+    
+    .contact-button:hover{
+        background-color:#1f1b1b;
+    }
+    
+     /* skills style*/
+    
+     .skills-content, .projects-content, .contact-content{
+        width:100%;
+        height:89%;
+        background-image: url(./big-data-technology-cyberspace-motherboard-microchip-circuit-board-computer-processor-neon-light.jpg);
+        background-size: cover;
+        background-position: center ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    
+    .wrapper{
+        background-color: rgba(0, 0, 0, 80%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height:100%;
+        width:100%;
+    }
+    
+    .wrapper h2{
+        color: #ca0edb;
+        text-align: center;
+        font-size: 1.75em;
+        animation-name:fade;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .skills, .projects{
+        width:95%;
+        height:85%;
+        display:flex;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        flex-wrap:wrap;
+    }
+    
+    .projects{
+        width:85%;
+        padding: 0 15px;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 10%;
+    }
+    
+    .skill-content, .project-content{
+        width:28%;
+        height:35%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        align-items:center;
+        box-shadow: 2px 2px 5px #ca0edb;
+        cursor: pointer;
+        border-radius: 5%;
+    }
+    
+    .project-content{
+        width:100%;
+        height:95%;
+        flex-shrink: 0;
+        align-self: center;
+        justify-content: space-between;
+        overflow:hidden;
+        box-shadow: 2px 0px 5px #ca0edb;
+        animation-name: slideLeft;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2s;
+    }
+    
+    .alfajr{
+        animation-delay: 1;
+    
+    }
+    
+    .bookstore{
+        animation-delay: 2;
+    }
+    
+    .portfolio{
+        animation-delay: 3;
+    }
+    
+    .hapi{
+        animation-delay: 4;
+    }
+    
+    .skill-content>i{
+        animation: fade 800ms ease-in-out 5 alternate ;
+        scale:3;
+    }
+    
+    .project-img{
+        border-radius: 5%;
+        width:100%;
+        height:45%; 
+    }
+    
+    .skill-content>p{
+        color: #ffffff;
+        font-size: 1em;
+    }
+    
+    .project-content>p{
+        color:#ca0edb;
+        font-size: 1.5em;
+        align-self: start;
+        font-weight: 500;
+        width:90%;
+        margin: auto;
+        height:5%;
+    }
+    
+    p.describtion{
+        color:white;
+        font-size: 1.1em;
+        font-weight: 300;
+        height:20%;
+        overflow:scroll;
+    }
+    
+    .progressbar-container { 
+        background-color: rgb(192, 192, 192); 
+        width: 80%; 
+        height:5%;
+        border-radius: 15px; 
+    } 
+    
+    .skill { 
+        background-color: #ca0edb; 
+        color: white; 
+        text-align: right; 
+        border-radius: 15px; 
+        height:100%;
+    } 
+    
+    .html { 
+        width: 95%; 
+        animation: progresshtml 2s ease-in-out;
+    }
+    
+    .css{
+        animation: progresscss 2s ease-in-out;
+        width:90%;
+    }
+    
+    .js{
+        width:80%;
+        animation: progressjs 2s ease-in-out;
+    }
+    
+    .bs{
+        width:80%;
+        animation: progressjs 2s ease-in-out;
+    }
+    
+    .react{
+        width:75%;
+        animation: progressreact 2s ease-in-out;
+    }
+    
+    .html-skill{
+        animation: slideRight 1s ease-in-out;
+    }
+    
+    .css-skill{
+        animation: slideLeft 1s ease-in-out;
+    }
+    
+    .js-skill{
+        animation: slideLeft 1s ease-in-out;
+    }
+    
+    .bs-skill{
+        animation: slideRight 1s ease-in-out;
+    }
+    
+    .react-skill{
+        animation: slideLeft 1s ease-in-out;
+    }
+    
+    .project-skills{
+        height:20%;
+        display:flex;
+        justify-content: flex-start;
+        align-content: space-evenly;
+        width:92%;
+        flex-wrap: wrap;
+        gap:3%;
+    }
+    
+    .project-skill{
+        width:28%;
+        padding:2px;
+        color: #ef4dfd;
+        background-color: #1f1b1b;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    
+    .projects::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .contact-content>.wrapper{
+        justify-content: space-evenly;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 2px 0px 5px #ca0edb;
+        border-radius: 10px;
+        width:80%;
+        height:75%;
+        animation: slideLeft 2s ease-in-out;
+    }
+    
+    input, textarea{
+        width:80%;
+        height:5%;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #000000;
+        color:#b8b3b3;
+        font-size: 18px;
+        border: none;
+        box-shadow: 2px 0px 5px #ca0edb;
+    }
+    
+    .message{
+        height:20%;
+    }
+    
+    input:focus, textarea:focus{
+        outline:none;
+        border:none;
+        box-shadow: 2px 0px 5px #f156ff;
+    }
+    
+    .ico{
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width:30%;
+        animation: slideRight 2s ease-in-out;
+    }
+
+}
