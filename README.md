@@ -25,6 +25,7 @@ This site showcases who I am, my skills, and the projects I’ve built as a fron
 
 This portfolio is responsive and works smoothly on both **desktop** and **mobile** devices.
 
+---
 
 Thank you for visiting 😊
 I hope you enjoy exploring my work as much as I enjoyed creating it. 
